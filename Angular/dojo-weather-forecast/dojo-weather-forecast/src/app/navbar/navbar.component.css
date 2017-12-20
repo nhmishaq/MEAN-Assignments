@@ -1,0 +1,11 @@
+a , p {
+    display: inline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-stretch: ultra-expanded; */
+    -webkit-transform:scale(2,1);
+    transform:scale(2,1); /* W3C */
+    
+}
+/* a {
+    font-stretch: expanded;
+} */
