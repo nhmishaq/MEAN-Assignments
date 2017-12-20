@@ -1,0 +1,19 @@
+<h1>Registration</h1>
+{{user | json}}<br>
+
+<form (submit)="onSubmit()">  
+  First Name: <input type="text" name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel"> {{firstName.errors | json}} <br>
+  Last Name: <input type="text" name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel"> {{lastName.errors | json}} <br>
+  Email: <input type="text" name="email" [(ngModel)]="user.email" #email="ngModel"> {{email.errors | json}} <br>
+  Password: <input type="text" name="password" minlength="16" pattern="^([a-zA-Z0-9@*#]{8,15})$"
+  [(ngModel)]="user.password" #password="ngModel"> {{password.errors | json}}<br>
+  Confirm Password: <input type="text" name="passwordConf" [(ngModel)]="user.passwordConf" #passwordConf="ngModel">{{passwordConf.errors | json}}<br>
+  Street Address: <input type="text" name="streetAddress"[(ngModel)]="user.streetAddress" #streetAddress="ngModel">{{streetAddress.errors | json}}<br>
+  Apt #: <input type="text" name="apt" [(ngModel)]="user.apt" #apt="ngModel">{{apt.errors | json}}<br>
+  City: <input type="text" name="city" [(ngModel)]="user.city" #city="ngModel">{{city.errors | json}}<br>
+  State: <input type="text" name="state" [(ngModel)]="user.state" #state="ngModel">{{state.errors | json}}<br>
+  Are you feeling Lucky? <input type="text" name="lucky" [(ngModel)]="user.lucky" #lucky="ngModel">{{lucky.valid | json}} {{lucky.errors | json}}<br>
+    <span *ngIf="user.valid">
+      <input type="submit">
+    </span>
+</form>

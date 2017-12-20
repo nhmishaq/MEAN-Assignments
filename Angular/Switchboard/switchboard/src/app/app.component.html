@@ -1,0 +1,30 @@
+<h1>Switchboard</h1>
+
+
+<span *ngFor = "let butt of buttonz">
+{{<button (click) ="onButtonClick($event)"> Click me!</button>}}
+
+</span>
+<button (click) ="onButtonClick($event)"> Click me!</button>
+<button (click) ="onButtonClick($event)"> Click me!</button>
+
+<button (click) ="onButtonClick(num)"> 
+  <span [ngStyle]="{
+  'background-color': color	
+}"
+>
+  </span>
+</button>
+
+<div class="switch" *ngFor="let switch of switches; let idx = index">
+    <button 
+    *ngIf="switch"
+    [ngClass]="{'on': switch}"
+    (click)="flipSwitch(idx)"
+    >ON</button>
+    <button 
+    *ngIf="!switch"
+    [ngClass]="{'on': switch}"
+    (click)="flipSwitch(idx)"
+    >OFF</button>
+  </div>

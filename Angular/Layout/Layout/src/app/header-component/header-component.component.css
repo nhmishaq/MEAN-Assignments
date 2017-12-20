@@ -1,0 +1,14 @@
+.content{
+    background-color: #9fc5f7;
+    border: solid;
+    padding: 10px;
+    display: block;
+    height: 100px;
+}
+p {
+    font-family: sans-serif;
+}
+h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+}

@@ -1,0 +1,9 @@
+<h2>Add a Quote</h2>
+<form (submit)="onSubmit()">  
+        Quote: <input type="text" name="msg" required minlength="4" [(ngModel)]="quoteInChild.msg" #msg="ngModel"> {{msg.errors | json}} <br>
+        Author Name: <input type="text" name="author" required minlength="1" [(ngModel)]="quoteInChild.author" #author="ngModel"> {{author.errors | json}} <br>
+        <input type="submit" value = Add Quote>
+</form>
+
+{{thisNameInChild | json}}
+<!-- {{quoteList | json}} -->

@@ -1,0 +1,79 @@
+1
+console.log(hello);
+var hello = 'world';
+//console output would be undefined
+
+2
+var needle = 'haystack';
+test();
+
+
+function test(){
+	var needle = 'magnet';
+	console.log(needle);
+}
+
+//we will get the error "test is not a function" since it was called before being created
+
+
+3
+var brendan = 'super cool';
+function print(){
+	brendan = 'only okay';
+	console.log(brendan);
+}
+console.log(brendan);
+//The output would be "super cool." The function was never called so it's-
+//reassignment of the brendan var never took place.
+
+4
+var food = 'chicken';
+console.log(food);
+eat();
+function eat(){
+	food = 'half-chicken';
+	console.log(food);
+	var food = ‘gone’;
+}
+//console will output 'chicken' but then the error "eat is not a function" will be thrown since
+//it was called before being created.
+
+5
+mean();
+console.log(food);
+var mean = function() {
+	food = "chicken";
+	console.log(food);
+	var food = "fish";
+	console.log(food);
+}
+console.log(food);
+//console error will be "mean is undefined" since the var mean hoisted to the top. 
+
+
+6
+console.log(genre);
+var genre = "disco";
+rewind();
+function rewind() {
+	genre = "rock";
+	console.log(genre);
+	var genre = "r&b";
+	console.log(genre);
+}
+console.log(genre);
+//console will first throw an undefined error, 
+//secondly it will throw a "not a function error" when it gets to rewing() call. 
+
+7
+dojo = "san jose";
+console.log(dojo);
+learn();
+function learn() {
+	dojo = "seattle";
+	console.log(dojo);
+	var dojo = "burbank";
+	console.log(dojo);
+}
+console.log(dojo);
+//it will log "san jose" but will throw a "learn is not a function error" when it reaches learn() call.

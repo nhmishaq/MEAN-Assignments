@@ -1,0 +1,18 @@
+.content{
+    background-color: #9fc5f7;
+    border: solid;
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 140px;
+    right: 6px;
+    width: 920px;
+    height: 600px;
+}
+p {
+    font-family: sans-serif;
+}
+h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+}

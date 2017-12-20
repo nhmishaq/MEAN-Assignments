@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here are all the amazing mongoose buddies that were entered</h1>    
+    <% for(var mon in Mongoose) %>
+    <p> Name: <%= mon.name %> Region: <%= mon.region %> Species: <%= mon.species %></p>
+
+
+    <% for(var i = 0; i < Mongoose.length; i++) { %>
+            <p> Name: <%= Mongoose[i].name %> Region: <%= Mongoose[i].region %> Species: <%= Mongoose[i].species %></p>
+            <p>_________________</p>
+          <% } %>    
+
+          <form action="mongooses" method="get">
+                <input type="submit" value="letMeCreateOne!">
+            </form>
+</body>
+</html>

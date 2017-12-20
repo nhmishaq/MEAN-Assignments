@@ -1,0 +1,17 @@
+h1{
+    width: 200px;
+}
+
+h2{
+    display: inline-block;
+    width: 100px;
+}
+button{
+    background-color: #9da8af;
+    display: inline-block;
+    width: 50px;
+}
+
+h4{
+    font-weight: normal;
+}
