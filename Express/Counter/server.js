@@ -12,25 +12,23 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 
-app.get('/', function (req, res){
-    res.render('main', {'counter': req.session.counter++} );
+app.get('/', (req, res) => {
+    res.render('main', {counter: addOneToCounter(req) });
 });
 // route to process new user form data:
-app.post('/increment', function (req, res){
-    req.session.counter = req.body.plus2;
-    if (req.session.counter){
-        req.session.counter += 2;
-        console.log(req.session.counter);    
-        res.redirect('/');
-    }
-});
-
-app.post('/reset', function (req, res){
-    req.session.reset = req.body.reset;
-    req.session.counter = 0;
-    console.log(req.session.counter);    
+app.post('/increment', (req, res) => {
+    addOneToCounter(req);
     res.redirect('/');
 });
+
+app.post('/reset', (req, res)=> {
+    req.session.destroy();
+    res.redirect('/');
+});
+
+function addOneToCounter(req){
+    return req.session.counter = req.session.counter ? req.session.counter + 1 : 1;
+}
 
 app.listen(8000, function() {
     console.log("listening on port 8000");
